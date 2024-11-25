@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Outfit } from 'next/font/google';
+
+const outfit = Outfit({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={outfit.className}>{children}</body>
     </html>
   );
 }
