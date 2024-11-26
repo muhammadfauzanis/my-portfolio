@@ -39,19 +39,19 @@ const Sidebar = () => {
         <Link href="">
           <FaGithub
             size={25}
-            className="text-gray-500 hover:text-white transition-all duration-300"
+            className="text-gray-400 hover:text-white transition-all duration-300"
           />
         </Link>
         <Link href="">
           <FaLinkedin
             size={25}
-            className="text-gray-500 hover:text-white transition-all duration-300"
+            className="text-gray-400 hover:text-white transition-all duration-300"
           />
         </Link>
         <Link href="">
           <FaInstagram
             size={25}
-            className="text-gray-500 hover:text-white transition-all duration-300"
+            className="text-gray-400 hover:text-white transition-all duration-300"
           />
         </Link>
       </div>
