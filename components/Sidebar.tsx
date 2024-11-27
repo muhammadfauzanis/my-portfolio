@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { TypeAnimation } from 'react-type-animation';
 
 const Sidebar = () => {
   const sidebarMenu = [
@@ -12,11 +13,26 @@ const Sidebar = () => {
     <div className="fixed w-fit h-full flex flex-col justify-evenly">
       <div className="space-y-2 overflow-hidden">
         <h1 className="text-2xl font-bold">Muhammad Fauzan</h1>
-        <h3>Software Engineer</h3>
-        {/* <p className="w-3/4">
-          Lorem ipsum dolor asdasdsadsadsasit, amet consectetur adipisicing
-          elit. Quo, atque!
-        </p> */}
+        <h3>
+          <TypeAnimation
+            sequence={[
+              'Software Engineer',
+              3000,
+              'BackEnd Developer',
+              3000,
+              'FrontEnd Developer',
+              3000,
+              'Fullstack Developer',
+              3000,
+              'Cloud Engineer',
+              3000,
+            ]}
+            wrapper="span"
+            speed={50}
+            cursor={true}
+            repeat={Infinity}
+          />
+        </h3>
       </div>
 
       <div className="">
