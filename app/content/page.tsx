@@ -1,14 +1,17 @@
+'use client';
+
 import Sidebar from '@/components/Sidebar';
 import { motion } from 'framer-motion';
+import { pageVariants } from '../animation';
 
 const ContentPage = () => {
   return (
     <motion.div
       className="w-[80%] h-full flex gap-x-10 m-auto"
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 100 }}
-      transition={{ duration: 0.5 }}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
     >
       <div className="w-1/4">
         <Sidebar />

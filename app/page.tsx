@@ -1,16 +1,20 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { BsCloudDownload } from 'react-icons/bs';
 import { IoIosArrowForward } from 'react-icons/io';
 import { motion } from 'framer-motion';
+import { pageVariants } from './animation';
 
 export default function Home() {
   return (
     <motion.div
       className="w-full h-screen flex flex-col justify-center items-center m-auto"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-8xl font-bold">MUHAMMAD FAUZAN</h1>

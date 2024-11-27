@@ -1,11 +1,11 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
-export default {
-    darkMode: ['class'],
+const config: Config = {
+    darkMode: ["class"],
     content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
   	extend: {
@@ -51,9 +51,6 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-  		textColor: {
-  			secondary: 'gray-400'
-  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -62,4 +59,5 @@ export default {
   	}
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+export default config;

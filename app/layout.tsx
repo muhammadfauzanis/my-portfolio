@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Outfit } from 'next/font/google';
+import { AnimatePresence } from 'framer-motion';
 
 const outfit = Outfit({
   weight: '400',
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <main className={outfit.className}>{children}</main>
+      <body className={outfit.className}>
+        <AnimatePresence mode="wait">{children}</AnimatePresence>
+      </body>
     </html>
   );
 }
